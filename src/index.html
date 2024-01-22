@@ -1,0 +1,117 @@
+--- 
+title: 'Home Page'
+description: 'Meta description for the page'
+layout: layouts/base.html
+permalink: '/'
+eleventyNavigation:
+   key: Home
+   order: 100 
+---
+
+
+{# HERO SECTION #}
+<section id="hero">
+    <h1>Home page title</h1>
+    <h2>Sub-heading</h2>
+    <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
+    <a href="/contact">Get in touch</a>
+
+    {# add hero image #}
+</section>
+
+
+
+{# SERVICES SECTION #}
+<section id="services">
+  <h2>Services</h2>
+
+  <div class="services-container">
+     <div class="service-card">
+        {# add icon #}
+        <h3>service name</h3>
+        <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+     </div>
+
+      <div class="service-card">
+        {# add icon #}
+        <h3>service name</h3>
+        <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+     </div>
+
+      <div class="service-card">
+        {# add icon #}
+        <h3>service name</h3>
+        <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+     </div>
+     
+  </div>
+</section>
+
+
+
+{# ABOUT ME SECTION #}
+<section id="about">
+    {# add image #}
+
+    <h2>About me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+     Blandit volutpat maecenas volutpat blandit aliquam. Arcu non odio euismod lacinia at quis risus sed.
+      </p>
+
+      <p class="cs-text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
+      <a href="/about">Learn more</a>
+</section>
+
+
+
+{# INFO ABOUT SERVICE SECTION #}
+<section id="service-info">
+  <h2>Additional info</h2>
+
+  <div class="info-block">
+     {# add img #}
+
+     <div>
+        <h3>Sub-heading</h3>
+
+        <ul>
+          <li>description text</li>
+          <li>description text</li>
+        </ul>
+     </div>
+  </div>
+
+  <div class="info-block">
+     {# add img #}
+
+     <div>
+        <h3>Sub-heading</h3>
+
+        <ul>
+          <li>description text</li>
+          <li>description text</li>
+        </ul>
+     </div>
+  </div>
+
+  <div class="info-block">
+     {# add img #}
+
+     <div>
+        <h3>Sub-heading</h3>
+
+        <ul>
+          <li>description text</li>
+          <li>description text</li>
+        </ul>
+     </div>
+  </div>
+</section>
+
+
+
+{# CALL TO ACTION #}
+{% include 'components/cta.html' %}

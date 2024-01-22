@@ -1,0 +1,38 @@
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            {# logo svg #}
+            <a href="/">
+                logo
+            </a>
+
+            <p>l"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="social-links">
+                {# svgs #}
+
+            </div>
+        </div>
+
+        <div class="sitemap">
+            <h3>Sitemap</h3>
+            <ul>
+                {% set navPages = collections.all | eleventyNavigation %}
+                <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+                {% for entry in navPages %}
+
+                    <li>
+                        <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
+                    </li>
+
+                {% endfor %}
+            </ul>
+
+            <a href="/contact" class="cs-button">Contact</a>
+        </div>
+
+    </div>
+
+</footer>

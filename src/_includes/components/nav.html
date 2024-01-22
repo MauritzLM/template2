@@ -1,0 +1,32 @@
+<nav>
+  {# svg logo #}
+  <a href="/" tabindex="1">
+  logo
+</a>
+
+  <div class="navigation" aria-expanded="false">
+    <button class="close-nav-button">
+    close menu
+    </button>
+
+     <ul>
+      {% set navPages = collections.all | eleventyNavigation %}
+              <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+                    {% for entry in navPages %}
+
+                    <li>
+                        <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
+                    </li>
+
+                    {% endfor %}
+     </ul>
+
+     <a href="/contact" class="cs-button">Contact</a>
+
+  </div>
+
+  {# hamburger menu svg #}
+  <button class="mobile-nav-button" tabindex="2">
+   open menu
+      </button>
+</nav>
