@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="./assets/css/root.css">
+        <link rel="stylesheet" href="{{ stylesheet }}">
+
+        <script defer src="./assets/js/script.js"></script>
 
         <title>
             {{title}}
@@ -14,9 +17,7 @@
 
     <body>
 
-        <header>
-            {% include '../components/nav.html' %}
-        </header>
+        {% include '../components/nav.html' %}
 
         <main>
             {{ content | safe }}
