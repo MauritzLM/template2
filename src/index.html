@@ -3,6 +3,7 @@ title: 'Home Page'
 description: 'Meta description for the page'
 layout: layouts/base.html
 permalink: '/'
+stylesheet: ./assets/css/home.css
 eleventyNavigation:
    key: Home
    order: 100 
@@ -11,13 +12,25 @@ eleventyNavigation:
 
 {# HERO SECTION #}
 <section id="hero">
-    <h1>Home page title</h1>
-    <h2>Sub-heading</h2>
-    <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
-    <a href="/contact">Get in touch</a>
+   {# hero image, different files for mobile/larger screens #}
+    <picture>
+       <source media="(max-width: 600px)" srcset="./assets/images/hero-image-m.webp">
+       <source media="(min-width: 601px)" srcset="./assets/images/hero-image.webp">
 
-    {# add hero image #}
+       <img aria-hidden="true" decoding="async" src="./assets/images/hero-image.webp" alt="kitchen cabinets" width="1920" height="1280">
+    </picture>
+
+  {# hero text #}
+   <div>
+      <h1>Home page title</h1>
+      <h2>Sub-heading</h2>
+      <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
+       <a href="/contact">Get in touch</a>
+
+    </div>
+
 </section>
 
 
@@ -27,22 +40,28 @@ eleventyNavigation:
   <h2>Services</h2>
 
   <div class="services-container">
+
      <div class="service-card">
-        {# add icon #}
+         
         <h3>service name</h3>
+        <img src="./assets/svgs/communication.svg" alt=""/>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
      </div>
 
       <div class="service-card">
-        {# add icon #}
+        
         <h3>service name</h3>
+        <img src="./assets/svgs/sports_handball.svg" alt=""/>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
      </div>
 
       <div class="service-card">
-        {# add icon #}
+        
         <h3>service name</h3>
+        <img src="./assets/svgs/heart_plus.svg" alt=""/>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
      </div>
      
   </div>
@@ -52,7 +71,8 @@ eleventyNavigation:
 
 {# ABOUT ME SECTION #}
 <section id="about">
-    {# add image #}
+    
+    <img src="./assets/images/about-image-cropped.webp" alt="">
 
     <h2>About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
