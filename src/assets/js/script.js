@@ -1,8 +1,8 @@
 
 // mobile nav toggle
-const navigation = document.querySelector(".navigation");
-const openNavButton = document.querySelector(".open-nav-button");
-const closeNavButton = document.querySelector(".close-nav-button");
+let navigation = document.querySelector(".navigation");
+let openNavButton = document.querySelector(".open-nav-button");
+let closeNavButton = document.querySelector(".close-nav-button");
 
 // open menu
 openNavButton.addEventListener("click", () => {
@@ -16,3 +16,5 @@ closeNavButton.addEventListener("click", () => {
     navigation.classList.toggle("show-menu");
     navigation.setAttribute("aria-expanded", "false");
 });
+
+// FAQ functionality
