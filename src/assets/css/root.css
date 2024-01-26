@@ -68,6 +68,11 @@ section,
     margin: auto;
 }
 
+section {
+    padding: 2em 0;
+    margin: 2em auto;
+}
+
 h1,
 h2,
 h3,
@@ -83,11 +88,20 @@ h1 {
 a {
     text-decoration: none;
     color: var(--bodyTextColor);
+    padding-bottom: .2em;
+
+
 }
 
-button {
-    cursor: pointer;
+/* nav link hover */
+li {
+    a {
+        &:hover {
+            border-bottom: 1px solid var(--bodyTextColorWhite);
+        }
+    }
 }
+
 
 img {
     width: 100%;
@@ -95,9 +109,22 @@ img {
 }
 
 .cs-active {
-    border-bottom: 1px solid var(--bodyTextColor);
+    border-bottom: 1px solid var(--bodyTextColorWhite);
 }
 
+/* buttons */
+button {
+    cursor: pointer;
+}
+
+.cs-button {
+    padding: .2em 1em .3em 1em;
+    background-color: var(--primary);
+    /* border: 1px solid var(--primary); */
+    border-radius: 10px;
+    font: inherit;
+    color: var(--bodyTextColorWhite);
+}
 
 /* NAV STYLES */
 #cs-navigation {
@@ -127,7 +154,7 @@ img {
             align-items: center;
             gap: 1em;
 
-           
+
             .close-nav-button {
                 align-self: flex-end;
                 height: 50px;
@@ -163,28 +190,75 @@ img {
     }
 }
 
+/* CTA */
+#cta {
+    /* box-shadow: 1px 1px 1px 1px rgb(209, 208, 208); */
+    border-radius: 10px;
+    padding: 4em 0;
+    text-align: center;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 1em;
+
+    }
+
+    .cs-button {
+        padding: .7em .9em .8em .9em;
+    }
+}
+
 /* FOOTER STYLES */
 footer {
     padding: 2em 0;
+    background-color: var(--secondary);
+    color: var(--bodyTextColorWhite);
 
     .footer-content {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
         a {
             img {
                 height: 50px;
                 width: 50px;
             }
         }
+
         .social-links {
+            display: flex;
+            gap: .4em;
+
             img {
-                width: 35px;
-                height: 35px;
+                width: 30px;
+                height: 30px;
             }
         }
 
         .sitemap {
+
+            h3 {
+                font-size: 1rem;
+            }
+
             ul {
                 list-style: none;
                 padding: 0;
+                margin-bottom: 1.5em;
+
+                display: flex;
+                flex-direction: column;
+                gap: .7em;
+
+
+
+                li {
+                    a {
+                        color: inherit;
+                    }
+                }
             }
         }
     }
