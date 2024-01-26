@@ -14,11 +14,10 @@ eleventyNavigation:
 <section id="hero">
 
    {# hero image, different files for mobile/larger screens #}
-    <picture>
-       <source media="(max-width: 600px)" srcset="./assets/images/hero-image-m.webp">
-       <source media="(min-width: 601px)" srcset="./assets/images/hero-image.webp">
+       <source media="(max-width: 600px)" srcset="./assets/images/snow.jpg">
+       <source media="(min-width: 601px)" srcset="./assets/images/snow.jpg">
 
-       <img aria-hidden="true" decoding="async" src="./assets/images/hero-image.webp" alt="kitchen cabinets" width="1920" height="1280">
+       <img aria-hidden="true" decoding="async" src="./assets/images/snow.jpg" alt="kitchen cabinets" width="1920" height="1280">
     </picture>
 
   {# hero text #}
@@ -27,8 +26,10 @@ eleventyNavigation:
       <h2>Sub-heading</h2>
       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
-       <a href="/contact">Get in touch</a>
-
+          <a href="/contact" class="cs-arrowlink">
+               <span>Get in touch</span> <img src="./assets/svgs/arrow_forward.svg" alt="">
+          </a>
+          
     </div>
 
 </section>
@@ -72,7 +73,7 @@ eleventyNavigation:
 {# ABOUT ME SECTION #}
 <section id="about">
     
-    <img src="./assets/images/about-image-cropped.webp" alt="">
+    <img src="./assets/images/about-image.jpg" alt="">
 
     <h2>About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -82,7 +83,14 @@ eleventyNavigation:
 
       <p class="cs-text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
-      <a href="/about">Learn more</a>
+      
+        {# learn more link #}
+         <a href="/about" class="cs-arrowlink">
+             <span>Learn more</span>
+              <img src="./assets/svgs/arrow_forward.svg" alt="">
+         </a>
+         
+      
 </section>
 
 
@@ -91,8 +99,10 @@ eleventyNavigation:
 <section id="service-info">
   <h2>Additional info</h2>
 
+<div class="container"> 
   <div class="info-block">
-     {# add img #}
+   
+     <img src="./assets/images/mountain.jpg" alt="">
 
      <div>
         <h3>Sub-heading</h3>
@@ -106,6 +116,7 @@ eleventyNavigation:
 
   <div class="info-block">
      {# add img #}
+     <img src="./assets/images/road.jpg" alt="">
 
      <div>
         <h3>Sub-heading</h3>
@@ -119,6 +130,7 @@ eleventyNavigation:
 
   <div class="info-block">
      {# add img #}
+     <img src="./assets/images/rocks.jpg" alt="">
 
      <div>
         <h3>Sub-heading</h3>
@@ -129,6 +141,7 @@ eleventyNavigation:
         </ul>
      </div>
   </div>
+ </div>
 </section>
 
 
