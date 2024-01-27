@@ -1,0 +1,53 @@
+/* STYLES FOR THE CONTACT PAGE */
+
+#hero {
+    padding: 0;
+
+    .contact-info-container {
+        padding: 2em 1em;
+        box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+        border-radius: 10px;
+
+        .contact-item {
+            margin-top: 1em;
+
+            .type {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+#contact-form {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 90%;
+        margin: auto;
+
+        div {
+            label {
+                display: block;
+                font-weight: 500;
+                margin-bottom: .4em;
+                width: 100%;
+            }
+
+            input, textarea {
+                font: inherit;
+                padding: .4em;
+                border-radius: 5px;
+                border: 1px solid rgb(204, 203, 203);
+                width: 100%;
+            }
+
+           
+        }
+
+        .cs-button {
+            border: none;
+            padding: .7em;
+        }
+    }
+}
