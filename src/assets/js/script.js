@@ -18,3 +18,15 @@ closeNavButton.addEventListener("click", () => {
 });
 
 // FAQ functionality
+// select faq-items, answers and images
+const faqItems = document.querySelectorAll(".faq-container .faq-item");
+const faqAnswers = document.querySelectorAll(".faq-item p");
+const faqIcons = document.querySelectorAll(".faq-item img");
+
+for(let i = 0; i < faqItems.length; i++) {
+    faqItems[i].addEventListener("click", () => {
+        faqAnswers[i].classList.toggle("hidden");
+
+        faqIcons[i].classList.toggle("rotate");
+    });
+};
