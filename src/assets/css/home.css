@@ -37,17 +37,31 @@
         justify-content: space-between;
 
         picture {
-            max-width: 600px;
+            max-width: 650px;
+        }
+
+        .hero-text {
+            p {
+                font-size: 1.1rem;
+            }
+
+            a {
+                font-size: 1.2rem;
+
+                img {
+                    top: 2px;
+                }
+            }
         }
     }
 }
 
 /* SERVICES SECTION  */
 #services {
-
     box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
     border-radius: 10px;
     padding: 1em 0;
+    max-width: 500px;
 
     h2 {
         text-align: center;
@@ -77,6 +91,7 @@
 @media only screen and (min-width: 1023px) {
     #services {
         box-shadow: none;
+        max-width: 100%;
 
         h2 {
             margin-bottom: 2em;
@@ -86,7 +101,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 3em;
+            gap: 4em;
 
             .service-card {
                 box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
@@ -107,8 +122,6 @@
 
 /* ABOUT SECTION */
 #about {
-
-
     .about-text {
         .cs-text {
             border-left: 2px solid black;
@@ -134,6 +147,18 @@
 
         .about-text {
             max-width: 450px;
+
+            h2 {
+                margin-top: 0;
+            }
+
+            a {
+                font-size: 1.2rem;
+
+                img {
+                    top: 2px;
+                }
+            }
         }
 
     }
@@ -145,6 +170,7 @@
     border-radius: 10px;
     padding: 2em;
     margin-top: 0;
+    max-width: 500px;
 
     h2 {
         text-align: center;
@@ -168,6 +194,7 @@
 @media only screen and (min-width: 1023px) {
     #service-info {
         box-shadow: none;
+        max-width: 100%;
 
         h2 {
             margin-bottom: 3em;
