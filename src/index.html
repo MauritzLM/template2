@@ -14,6 +14,7 @@ eleventyNavigation:
 <section id="hero">
 
    {# hero image, different files for mobile/larger screens #}
+     <picture>
        <source media="(max-width: 600px)" srcset="./assets/images/snow.jpg">
        <source media="(min-width: 601px)" srcset="./assets/images/snow.jpg">
 
@@ -21,7 +22,7 @@ eleventyNavigation:
     </picture>
 
   {# hero text #}
-   <div>
+   <div class="hero-text">
       <h1>Home page title</h1>
       <h2>Sub-heading</h2>
       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
@@ -44,23 +45,23 @@ eleventyNavigation:
 
      <div class="service-card">
          
-        <h3>service name</h3>
         <img src="./assets/svgs/communication.svg" alt=""/>
+         <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
      </div>
 
       <div class="service-card">
         
-        <h3>service name</h3>
         <img src="./assets/svgs/sports_handball.svg" alt=""/>
+        <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
      </div>
 
       <div class="service-card">
         
-        <h3>service name</h3>
         <img src="./assets/svgs/heart_plus.svg" alt=""/>
+        <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
      </div>
@@ -75,6 +76,7 @@ eleventyNavigation:
     
     <img src="./assets/images/about-image.jpg" alt="">
 
+  <div class="about-text">
     <h2>About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
      Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
@@ -89,7 +91,7 @@ eleventyNavigation:
              <span>Learn more</span>
               <img src="./assets/svgs/arrow_forward.svg" alt="">
          </a>
-         
+   </div>   
       
 </section>
 
