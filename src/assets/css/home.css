@@ -23,20 +23,26 @@
     }
 }
 
+/* HERO SECTION */
 #hero {
     display: flex;
     flex-direction: column;
     padding-top: 0;
-
-    /* picture {
-        img {
-            border-radius: 10px;
-        }
-
-    } */
 }
 
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #hero {
+        flex-direction: row-reverse;
+        justify-content: space-between;
 
+        picture {
+            max-width: 600px;
+        }
+    }
+}
+
+/* SERVICES SECTION  */
 #services {
 
     box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
@@ -67,16 +73,73 @@
     }
 }
 
-#about {
-    .cs-text {
-        border-left: 2px solid black;
-        font-size: 1.2rem;
-        font-weight: 600;
-        padding-left: .5em;
-        margin-top: 1.5em; 
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #services {
+        box-shadow: none;
+
+        h2 {
+            margin-bottom: 2em;
+        }
+
+        .services-container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 3em;
+
+            .service-card {
+                box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+                padding: 3em 1.5em;
+
+                img {
+                    height: 80px;
+                    width: 80px;
+                }
+
+                h3 {
+                    margin-top: 1.5em;
+                }
+            }
+        }
     }
 }
 
+/* ABOUT SECTION */
+#about {
+
+
+    .about-text {
+        .cs-text {
+            border-left: 2px solid black;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding-left: .5em;
+            margin-top: 1.5em;
+        }
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #about {
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+        margin: 10em auto;
+
+        img {
+            max-width: 500px;
+        }
+
+        .about-text {
+            max-width: 450px;
+        }
+
+    }
+}
+
+/* SERVICE-INFO SECTION */
 #service-info {
     box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
     border-radius: 10px;
@@ -96,6 +159,68 @@
         .info-block {
             img {
                 display: none;
+            }
+        }
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #service-info {
+        box-shadow: none;
+
+        h2 {
+            margin-bottom: 3em;
+        }
+
+        .container {
+            gap: 8em;
+            align-items: center;
+            max-width: 900px;
+            margin: auto;
+
+            .info-block {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+
+                img {
+                    display: initial;
+                    max-width: 400px;
+                    z-index: -1;
+                    border-radius: 10px 0 0 10px;
+                }
+
+                div {
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+                    width: 60%;
+                    padding: 2em 4em;
+                    background-color: var(--bodyTextColorWhite);
+                    position: relative;
+                    right: 20px;
+
+                    h3 {
+                        border-bottom: 1px solid;
+                        padding-bottom: 1em;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .info-block:nth-last-of-type(2) {
+                flex-direction: row-reverse;
+
+
+                img {
+                    border-radius: 0 10px 10px 0;
+                }
+
+                div {
+                    left: 20px;
+                    right: 0;
+                }
             }
         }
     }

@@ -85,6 +85,10 @@ h1 {
     font-weight: 900;
 }
 
+h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
 a {
     text-decoration: none;
     color: var(--bodyTextColor);
@@ -97,7 +101,7 @@ a {
 li {
     a {
         &:hover {
-            border-bottom: 1px solid var(--bodyTextColorWhite);
+            border-bottom: 2px solid var(--primary);
         }
     }
 }
@@ -109,7 +113,7 @@ img {
 }
 
 .cs-active {
-    border-bottom: 1px solid var(--bodyTextColorWhite);
+    border-bottom: 2px solid var(--primary);
 }
 
 /* buttons */
@@ -126,17 +130,35 @@ button {
     color: var(--bodyTextColorWhite);
 }
 
+/* tablet general styles */
+@media only screen and (min-width: 700px) {
+ section {
+    width: 80%;
+    margin: 4em auto;
+ }
+}
+
+/* desktop general styles */
+@media only screen and (min-width: 1023px) {
+    section {
+        width: 95%;
+        max-width: 1200px;
+        margin: 7em auto;
+    }
+}
+
 /* NAV STYLES */
 #cs-navigation {
     display: flex;
     justify-content: space-between;
-    padding: 1em 0;
+    padding-top: 1em;
 
     nav {
 
         button {
             background: none;
             border: none;
+            padding: 0;
         }
 
         .navigation {
@@ -147,7 +169,7 @@ button {
             z-index: -100;
             background-color: var(--secondary);
             height: 100vh;
-            width: 50vw;
+            width: 55vw;
             transition: .5s all;
             display: flex;
             flex-direction: column;
@@ -186,6 +208,47 @@ button {
         .show-menu {
             right: 0;
             z-index: 100;
+        }
+    }
+}
+
+/* desktop nav */
+@media only screen and (min-width: 1023px) {
+    #cs-navigation {
+        padding-top: 1.6em;
+
+        nav {
+
+            .open-nav-button {
+                display: none;
+            }
+
+            .navigation {
+                position: static;
+                height: auto;
+                width: auto;
+                background-color: inherit;
+                color: var(--bodyTextColor);
+                flex-direction: row;
+                gap: 6em;
+                padding: 0;
+
+                ul {
+                    flex-direction: row;
+                    gap: 1.8em;
+
+                    li {
+                        a {
+                            color: inherit;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .close-nav-button {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -258,6 +321,30 @@ footer {
                     a {
                         color: inherit;
                     }
+                }
+            }
+        }
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    footer {
+        padding: 3.5em 0;
+
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .company {
+                max-width: 500px;
+            }
+
+            .sitemap {
+                ul {
+                    flex-direction: row;
+                    margin-bottom: 2.5em;
+                    gap: 1.6em;
                 }
             }
         }

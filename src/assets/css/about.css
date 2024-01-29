@@ -1,9 +1,72 @@
 /* STYLES FOR THE ABOUT PAGE */
 
+/* HERO SECTION */
 #hero {
     padding: 0;
+
+    img {
+        max-width: 600px;
+    }
+}
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #hero {
+        display: grid;
+        grid-template-areas:
+                "heading heading"
+                "image text";
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4em;
+        row-gap: 1em;
+        margin-top: 2em;
+
+        h1 {
+            grid-area: heading;
+
+        }
+
+        img {
+            grid-area: image;
+        }
+
+        .cs-text {
+            grid-area: text;
+        }
+    }
 }
 
+/* MY MISSION SECTION */
 #my-mission {
     padding-bottom: 0;
+
+    img {
+        max-width: 600px;
+    }
 }
+@media only screen and (min-width: 1023px) {
+    #my-mission {
+        display: grid;
+        grid-template-areas:
+                "heading image"
+                "text image";
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4em;
+        
+        h2 {
+            grid-area: heading;
+            margin-bottom: 0;
+        
+        }
+        
+        img {
+            grid-area: image;
+        }
+        
+        .cs-text {
+            grid-area: text;
+        }
+    }
+    
+}
+
+

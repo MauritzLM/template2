@@ -4,27 +4,79 @@
 #hero {
     padding: 0;
 }
+
 /* SERVICES STYLES */
 #services {
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
     margin-top: 0;
-    padding: 1em;
+
+    .service-card {
+        box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+        border-radius: 10px;
+        padding: 1.5em;
+        max-width: 350px;
+        margin: auto;
+
+        img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #services {
+        .service-card {
+            max-width: 900px;
+            display: grid;
+            grid-template-areas:
+                "heading heading"
+                "image text";
+            grid-template-columns: 1fr 1fr;
+            column-gap: 3em;
+            padding: 3em;
+
+            h3 {
+                grid-area: heading;
+                font-size: 1.4rem;
+                margin-top: 0;
+            }
+
+            img {
+                grid-area: image;
+            }
+
+            .service-text {
+                grid-area: text;
+            }
+        }
+    }
 }
 
 /* WHAT TO EXPECT */
-#what-to-expect{
+#what-to-expect {
     padding: 1em 0;
+
+    p {
+        max-width: 700px;
+    }
 }
 
 /* FAQ STYLES */
 #faq {
     padding: 0;
 
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
     .faq-container {
         display: flex;
         flex-direction: column;
         gap: 1.5em;
+        max-width: 700px;
+        margin: auto;
 
         .faq-item {
             position: relative;
@@ -48,12 +100,30 @@
 
             }
 
+            p {
+                width: 92%;
+                margin-left: 1em;
+            }
+
         }
+    }
+}
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #faq {
+
+        h2 {
+            margin-bottom: 2em;
+        }
+
+        /* .faq-container {
+            gap: 2.5em;
+        } */
     }
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .rotate {
