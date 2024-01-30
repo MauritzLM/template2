@@ -2,13 +2,14 @@
 
 /* GENERAL STYLES AND FONTS */
 :root {
-    --primary: rgb(19, 145, 155);
-    --primaryLight: #ffd675;
-    --secondary: rgb(19, 52, 83);
+    --primary: #4A8EB5;
+    --primaryLight: #6EA4C4;
+    --secondary: #B5714A;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
+    --bodyTextColor: #404040;
     --bodyTextColorWhite: #fafbfc;
+    --backgroundColorDark: #2b444f;
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -128,21 +129,25 @@ button {
     border-radius: 10px;
     font: inherit;
     color: var(--bodyTextColorWhite);
+
+    &:hover {
+        background-color: var(--primaryLight);
+    }
 }
 
 /* tablet general styles */
 @media only screen and (min-width: 700px) {
- section {
-    width: 80%;
-    margin: 4em auto;
- }
+    section {
+        width: 80%;
+        margin: 4em auto;
+    }
 }
 
 /* desktop general styles */
 @media only screen and (min-width: 1023px) {
     section {
         width: 95%;
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 7em auto;
     }
 }
@@ -167,7 +172,7 @@ button {
             top: 0;
             right: -999px;
             z-index: -100;
-            background-color: var(--secondary);
+            background-color: var(--backgroundColorDark);
             height: 100vh;
             width: 55vw;
             transition: .5s all;
@@ -255,10 +260,15 @@ button {
 
 /* CTA */
 #cta {
-    /* box-shadow: 1px 1px 1px 1px rgb(209, 208, 208); */
-    border-radius: 10px;
     padding: 4em 0;
     text-align: center;
+    margin: 0;
+    margin-top: 5em;
+    width: 100%;
+    max-width: 100%;
+    background-image: url(../images/snow.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 
     h2 {
         margin-top: 0;
@@ -270,11 +280,17 @@ button {
         padding: .7em .9em .8em .9em;
     }
 }
+/* desktop */
+@media only screen and (min-width: 1023px) {
+    #cta {
+        padding: 6em 0;
+    }
+}
 
 /* FOOTER STYLES */
 footer {
     padding: 2em 0;
-    background-color: var(--secondary);
+    background-color: var(--backgroundColorDark);
     color: var(--bodyTextColorWhite);
 
     .footer-content {
@@ -283,22 +299,27 @@ footer {
         flex-direction: column;
         gap: 1.5em;
 
-        a {
-            img {
-                height: 50px;
-                width: 50px;
+        .company {
+            max-width: 500px;
+
+            a {
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .social-links {
+                display: flex;
+                gap: .6em;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
 
-        .social-links {
-            display: flex;
-            gap: .4em;
-
-            img {
-                width: 30px;
-                height: 30px;
-            }
-        }
 
         .sitemap {
 
@@ -309,7 +330,7 @@ footer {
             ul {
                 list-style: none;
                 padding: 0;
-                margin-bottom: 1.5em;
+                margin-bottom: 2em;
 
                 display: flex;
                 flex-direction: column;
@@ -330,22 +351,37 @@ footer {
 /* desktop */
 @media only screen and (min-width: 1023px) {
     footer {
-        padding: 3.5em 0;
+        padding: 2.5em 0 3.5em 0;
 
         .footer-content {
             flex-direction: row;
             justify-content: space-between;
 
-            .company {
-                max-width: 500px;
-            }
-
             .sitemap {
-                ul {
-                    flex-direction: row;
-                    margin-bottom: 2.5em;
-                    gap: 1.6em;
+                align-self: center;
+
+                /* h3 {
+                    margin: 0;
+                } */
+
+                div {
+                    display: flex;
+                    gap: 2em;
+
+
+                    ul {
+                        flex-direction: row;
+                        margin: 0;
+                        gap: 1.6em;
+                        align-items: center;
+
+                    }
+
+                    .cs-button {
+                        align-self: center;
+                    }
                 }
+
             }
         }
     }

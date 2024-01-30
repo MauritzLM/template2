@@ -9,8 +9,12 @@
 #services {
     margin-top: 0;
 
+    h2 {
+        margin-bottom: 1.5em;
+    }
+
     .service-card {
-        box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+        box-shadow: 0px 0px 12px 0px #d6d9db;
         border-radius: 10px;
         padding: 1.5em;
         max-width: 350px;
@@ -39,8 +43,11 @@
 /* desktop */
 @media only screen and (min-width: 1023px) {
     #services {
+        h2 {
+            margin-bottom: 2em;
+        }
         .service-card {
-            max-width: 100%;
+            max-width: 90%;
             display: grid;
             grid-template-areas:
                 "heading heading"
@@ -48,7 +55,7 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 3em;
             row-gap: 1.5em;
-            padding: 3em;
+            padding: 3em 3em 4em 3em;
 
             h3 {
                 grid-area: heading;
@@ -110,7 +117,7 @@
 
         .faq-item {
             position: relative;
-            border: 1px solid rgb(199, 197, 197);
+            border: 1px solid rgb(223, 221, 221);
             border-radius: 10px;
             padding: 1em;
             cursor: pointer;
@@ -119,7 +126,7 @@
                 height: 25px;
                 width: 25px;
                 position: absolute;
-                right: 5px;
+                right: 15px;
             }
 
             button {

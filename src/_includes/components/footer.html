@@ -29,19 +29,23 @@
 
         <div class="sitemap">
             <h3>Sitemap</h3>
-            <ul>
-                {% set navPages = collections.all | eleventyNavigation %}
-                <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
-                {% for entry in navPages %}
 
-                    <li>
-                        <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
-                    </li>
+            <div>
+               <ul>
+                   {% set navPages = collections.all | eleventyNavigation %}
+                   <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+                   {% for entry in navPages %}
 
-                {% endfor %}
-            </ul>
+                       <li>
+                           <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
+                       </li>
 
-            <a href="/contact" class="cs-button">Contact</a>
+                   {% endfor %}
+               </ul>
+
+               <a href="/contact" class="cs-button">Contact</a>
+
+            </div>
         </div>
 
     </div>

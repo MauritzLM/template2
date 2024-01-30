@@ -12,7 +12,7 @@
 
     &:hover {
         gap: .5em;
-        color: rgb(85, 155, 235);
+        color: var(--primaryLight);
     }
 
     img {
@@ -58,7 +58,7 @@
 
 /* SERVICES SECTION  */
 #services {
-    box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+    box-shadow: 0px 0px 12px 0px #d6d9db;;
     border-radius: 10px;
     padding: 1em 0;
     max-width: 500px;
@@ -104,7 +104,7 @@
             gap: 4em;
 
             .service-card {
-                box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+                box-shadow: 0px 0px 12px 0px #d6d9db;
                 padding: 3em 1.5em;
 
                 img {
@@ -166,7 +166,7 @@
 
 /* SERVICE-INFO SECTION */
 #service-info {
-    box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+    box-shadow: 0px 0px 12px 0px #d6d9db;;
     border-radius: 10px;
     padding: 2em;
     margin-top: 0;
@@ -221,7 +221,7 @@
 
                 div {
                     border-radius: 10px;
-                    box-shadow: 1px 1px 1px 1px rgb(209, 208, 208);
+                    box-shadow: 0px 0px 12px 0px #d6d9db;
                     width: 60%;
                     padding: 2em 4em;
                     background-color: var(--bodyTextColorWhite);
