@@ -58,7 +58,8 @@
 
 /* SERVICES SECTION  */
 #services {
-    box-shadow: 0px 0px 12px 0px #d6d9db;;
+    box-shadow: 0px 0px 12px 0px #d6d9db;
+    ;
     border-radius: 10px;
     padding: 1em 0;
     max-width: 500px;
@@ -163,10 +164,17 @@
 
     }
 }
+/* larger screens */
+@media only screen and (min-width: 1200px) {
+     #about {
+        gap: 10em;
+     }
+}
 
 /* SERVICE-INFO SECTION */
 #service-info {
-    box-shadow: 0px 0px 12px 0px #d6d9db;;
+    box-shadow: 0px 0px 12px 0px #d6d9db;
+    ;
     border-radius: 10px;
     padding: 2em;
     margin-top: 0;
@@ -185,6 +193,22 @@
         .info-block {
             img {
                 display: none;
+            }
+
+            div {
+                h3 {
+                    padding-bottom: .5em;
+                    width: max-content;
+                    border-bottom: 1px solid var(--bodyTextColor);
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2em;
+                    padding-left: 1em;
+                    margin-top: 2em;
+                }
             }
         }
     }
@@ -221,7 +245,7 @@
 
                 div {
                     border-radius: 10px;
-                    box-shadow: 0px 0px 12px 0px #d6d9db;
+                    /* box-shadow: 0px 0px 12px 0px #d6d9db; */
                     width: 60%;
                     padding: 2em 4em;
                     background-color: var(--bodyTextColorWhite);
@@ -229,9 +253,8 @@
                     right: 20px;
 
                     h3 {
-                        border-bottom: 1px solid;
-                        padding-bottom: 1em;
                         margin-top: 0;
+                        width: 100%;
                     }
                 }
             }
@@ -248,6 +271,22 @@
                     left: 20px;
                     right: 0;
                 }
+            }
+        }
+    }
+}
+
+/* larger screen */
+@media screen and (min-width: 1200px) {
+    #service-info {
+        .container {
+            .info-block {
+                position: relative;
+                right: 100px;
+            }
+
+            .info-block:nth-last-of-type(2) {
+                left: 100px;
             }
         }
     }
