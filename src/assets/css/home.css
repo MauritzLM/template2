@@ -164,11 +164,12 @@
 
     }
 }
+
 /* larger screens */
 @media only screen and (min-width: 1200px) {
-     #about {
+    #about {
         gap: 10em;
-     }
+    }
 }
 
 /* SERVICE-INFO SECTION */
@@ -208,6 +209,8 @@
                     gap: 2em;
                     padding-left: 1em;
                     margin-top: 2em;
+
+
                 }
             }
         }
@@ -256,6 +259,12 @@
                         margin-top: 0;
                         width: 100%;
                     }
+
+                    ul {
+                        li {
+                            font-size: 1.15rem;
+                        }
+                    }
                 }
             }
 
@@ -291,3 +300,113 @@
         }
     }
 }
+
+/* GALLERY STYLES */
+#gallery {
+    position: relative;
+
+    .image-container {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    /* figure out current image size* */
+
+    .image-viewer {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.541);
+        top: 0;
+        height: 1000px;
+        width: 110%;
+        /* padding: 5em; */
+
+        .current-image {
+
+            width: 90%;
+            height: 90%;
+            margin: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        .arrow-left,
+        .arrow-right,
+        .close-viewer {
+            height: 30px;
+            width: 30px;
+            border: none;
+            /* background-color: none; */
+
+        }
+
+        .arrow-left {
+            transform: rotate(.25turn);
+        }
+
+        .arrow-right {
+            transform: rotate(.75turn);
+        }
+    }
+
+    .show-viewer {
+        display: block;
+        z-index: 10;
+    }
+}
+
+
+
+@media only screen and (min-width: 1023px) {
+    #gallery {
+        h2 {
+            text-align: center;
+        }
+
+        .image-container {
+
+            margin: auto;
+            margin-top: 4em;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "image1 image1 image2 image3"
+                "image1 image1 image4 image3";
+
+            img {
+                height: 100%;
+            }
+
+            img:nth-of-type(1) {
+                grid-area: image1;
+            }
+
+            img:nth-of-type(2) {
+                grid-area: image2;
+            }
+
+            img:nth-of-type(3) {
+                grid-area: image3;
+            }
+
+            img:nth-of-type(4) {
+                grid-area: image4;
+            }
+        }
+    }
+
+}
+
+
+
+/* TESTIMONIALS SECTION */
