@@ -157,7 +157,41 @@ eleventyNavigation:
 
 
 {# gallery section with image viewer modal #}
+<section id="gallery">
+   <h2>Gallery</h2>
 
+   <div class="image-container">
+      <img src="./assets/images/travel-1.jpg" alt="">
+      <img src="./assets/images/travel-3.jpg" alt="">
+      <img src="./assets/images/travel-4.jpg" alt="">
+      <img src="./assets/images/travel-2.jpg" alt="">
+
+   </div>
+
+   {# image viewer modal #}
+   <div class="image-viewer">
+
+   {# close button #}
+     <button class="close-viewer">
+         <img src="./assets/svgs/close_dark.svg">
+      </button>
+
+     {# current image being viewed #}
+     <div class="current-image">
+        <img src="" alt=""> 
+      </div>
+      
+      {# left arrow #}
+      <button class="arrow-left">
+         <img src="./assets/svgs/expand.svg">
+      </button>
+
+    {# right arrow #}
+      <button class="arrow-right"> 
+         <img src="./assets/svgs/expand.svg">
+      </button>
+   </div>
+</section>
 
 
 
