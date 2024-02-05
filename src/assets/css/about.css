@@ -3,6 +3,9 @@
 /* HERO SECTION */
 #hero {
     padding: 0;
+    img {
+        border-radius: 10px;
+    }
 }
 /* desktop */
 @media only screen and (min-width: 1023px) {
@@ -23,7 +26,8 @@
 
         img {
             grid-area: image;
-            max-width: 600px;
+            max-width: 500px;
+
         }
 
         .cs-text {
@@ -35,6 +39,11 @@
 /* MY MISSION SECTION */
 #my-mission {
     padding-bottom: 0;
+
+    img {
+        border-radius: 10px;
+        max-width: 500px;
+    }
 
     .cs-text {
         p {
@@ -59,7 +68,6 @@
         
         img {
             grid-area: image;
-            max-width: 600px;
         }
         
         .cs-text {
