@@ -32,59 +32,62 @@ for (let i = 0; i < faqItems.length; i++) {
 };
 
 
-// image viewer modal
+// image viewer modal (not in use atm)
 // click on image, change src of modal image, change styles of modal,
-const galleryImages = document.querySelectorAll("#gallery .image-container img");
-const modalImage = document.querySelector(".image-viewer .current-image img");
-const imageViewer = document.querySelector(".image-viewer");
-const closeViewerButton = document.querySelector(".image-viewer .close-viewer");
+// const galleryImages = document.querySelectorAll("#gallery .image-container img");
+// const modalImage = document.querySelector(".image-viewer .current-image img");
+// const imageViewer = document.querySelector(".image-viewer");
+// const closeViewerButton = document.querySelector(".image-viewer .close-viewer");
 
-// adjust position where modal pops up*
-const imageSrcArray = ['http://localhost:8080/assets/images/travel-1.jpg',
- 'http://localhost:8080/assets/images/travel-2.jpg',
-  'http://localhost:8080/assets/images/travel-3.jpg',
-   'http://localhost:8080/assets/images/travel-4.jpg'];
+// // populate array on page load
+// const imageSrcArray = [];
 
-let current_index;
+// const populateArray = () => {
+//     galleryImages.forEach(image => {
+//         imageSrcArray.push(image.src);
+//     });
+// };
 
-galleryImages.forEach(image => {
-    image.addEventListener("click", (e) => {
-        // find index of image in array
-        current_index = imageSrcArray.indexOf(image.src);
+// populateArray();
 
-        // change modal image src
-        modalImage.src = imageSrcArray[current_index];
+// let current_index;
 
-        // change modal styles
-        imageViewer.classList.add("show-viewer");
-    });
-});
+// galleryImages.forEach(image => {
+//     image.addEventListener("click", (e) => {
+//         // find index of image in array
+//         current_index = imageSrcArray.indexOf(image.src);
+
+//         // change modal image src
+//         modalImage.src = imageSrcArray[current_index];
+
+//         // change modal styles
+//         imageViewer.classList.add("show-viewer");
+//     });
+// });
 
 // fix button clicking (its clicking on image)*
 
 // change image with left and right buttons
-imageViewer.addEventListener("click", (e) => {
-    
-    
-    // left
-    if(e.target.matches(".image-viewer .arrow-left")) {
-        // update current index
-        current_index === 0 ? current_index = imageSrcArray.length - 1 : current_index --;
-        modalImage.src = imageSrcArray[current_index];
-    };
+// imageViewer.addEventListener("click", (e) => {
+//     // left
+//     if (e.target.matches(".image-viewer .arrow-left")) {
+//         // update current index
+//         current_index === 0 ? current_index = imageSrcArray.length - 1 : current_index--;
+//         modalImage.src = imageSrcArray[current_index];
+//     };
 
-    // right
-    if(e.target.matches(".image-viewer .arrow-right")) {
-        // update current index
-        current_index === imageSrcArray.length - 1 ? current_index = 0 : current_index ++;
-        modalImage.src = imageSrcArray[current_index];
-    };
+//     // right
+//     if (e.target.matches(".image-viewer .arrow-right")) {
+//         // update current index
+//         current_index === imageSrcArray.length - 1 ? current_index = 0 : current_index++;
+//         modalImage.src = imageSrcArray[current_index];
+//     };
 
-    // close
-    if(e.target.matches(".image-viewer .close-viewer")) {
-        
-        imageViewer.classList.remove("show-viewer");
-    };
-});
+//     // close
+//     if (e.target.matches(".image-viewer .close-viewer")) {
+
+//         imageViewer.classList.remove("show-viewer");
+//     };
+// });
 
 
