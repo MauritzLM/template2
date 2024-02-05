@@ -15,10 +15,10 @@ eleventyNavigation:
 
    {# hero image, different files for mobile/larger screens #}
      <picture>
-       <source media="(max-width: 600px)" srcset="./assets/images/snow.jpg">
+       <source media="(max-width: 600px)" srcset="./assets/images/snow-m.jpg">
        <source media="(min-width: 601px)" srcset="./assets/images/snow.jpg">
 
-       <img aria-hidden="true" decoding="async" src="./assets/images/snow.jpg" alt="kitchen cabinets" width="1920" height="1280">
+       <img aria-hidden="true" decoding="async" src="./assets/images/snow.jpg" alt="snow mountain with hikers" width="1920" height="1280" loading="eager">
     </picture>
 
   {# hero text #}
@@ -28,7 +28,7 @@ eleventyNavigation:
       <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
           <a href="/contact" class="cs-arrowlink">
-               <span>Get in touch</span> <img src="./assets/svgs/arrow_forward.svg" alt="">
+               <span>Get in touch</span> <img src="./assets/svgs/arrow_forward.svg" alt="arrow" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20">
           </a>
           
     </div>
@@ -41,18 +41,19 @@ eleventyNavigation:
 <section id="services">
   <h2>Services</h2>
 
+ {# service card container #}
   <div class="services-container">
 
      <div class="service-card">
          
-        <img src="./assets/svgs/communication.svg" alt=""/>
+        <img src="./assets/svgs/communication.svg" alt="communication" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20"/>
          <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
      </div>
 
       <div class="service-card">
         
-        <img src="./assets/svgs/sports_handball.svg" alt=""/>
+        <img src="./assets/svgs/sports_handball.svg" alt="handball" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20"/>
         <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
@@ -60,7 +61,7 @@ eleventyNavigation:
 
       <div class="service-card">
         
-        <img src="./assets/svgs/heart_plus.svg" alt=""/>
+        <img src="./assets/svgs/heart_plus.svg" alt="heart with plus" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20"/>
         <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
@@ -73,9 +74,16 @@ eleventyNavigation:
 
 {# ABOUT ME SECTION #}
 <section id="about">
-    
-    <img src="./assets/images/about-image.jpg" alt="">
 
+   {# about image #}
+   <picture>
+       <source media="(max-width: 600px)" srcset="./assets/images/about-image.jpg">
+       <source media="(min-width: 601px)" srcset="./assets/images/about-image.jpg">
+
+       <img src="./assets/images/about-image.jpg" alt="profile picture" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
+    </picture>
+    
+    {# about text #}
   <div class="about-text">
     <h2>About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -89,7 +97,7 @@ eleventyNavigation:
         {# learn more link #}
          <a href="/about" class="cs-arrowlink">
              <span>Learn more</span>
-              <img src="./assets/svgs/arrow_forward.svg" alt="">
+              <img src="./assets/svgs/arrow_forward.svg" alt="arrow" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20">
          </a>
    </div>   
       
@@ -104,7 +112,7 @@ eleventyNavigation:
 <div class="container"> 
   <div class="info-block">
    
-     <img src="./assets/images/mountain.jpg" alt="">
+     <img src="./assets/images/mountain.jpg" alt="person on mountain" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
      <div>
         <h3>Sub-heading</h3>
@@ -121,7 +129,7 @@ eleventyNavigation:
 
   <div class="info-block">
      {# add img #}
-     <img src="./assets/images/road.jpg" alt="">
+     <img src="./assets/images/road.jpg" alt="open road" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
      <div>
         <h3>Sub-heading</h3>
@@ -139,7 +147,7 @@ eleventyNavigation:
 
   <div class="info-block">
      {# add img #}
-     <img src="./assets/images/rocks.jpg" alt="">
+     <img src="./assets/images/rocks.jpg" alt="stacked rocks" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
      <div>
         <h3>Sub-heading</h3>
@@ -161,10 +169,10 @@ eleventyNavigation:
    <h2>Gallery</h2>
 
    <div class="image-container">
-      <img src="./assets/images/travel-1.jpg" alt="">
-      <img src="./assets/images/travel-3.jpg" alt="">
-      <img src="./assets/images/travel-4.jpg" alt="">
-      <img src="./assets/images/travel-2.jpg" alt="">
+      <img src="./assets/images/travel-1.jpg" alt="map" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
+      <img src="./assets/images/travel-3.jpg" alt="minibus on road" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
+      <img src="./assets/images/travel-4.jpg" alt="grassy hills with lake" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
+      <img src="./assets/images/travel-2.jpg" alt="camp fire" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
    </div>
 
@@ -173,7 +181,7 @@ eleventyNavigation:
 
    {# close button #}
      <button class="close-viewer">
-         <img src="./assets/svgs/close_dark.svg">
+         <img src="./assets/svgs/close_dark.svg" aria-hidden="true" decoding="async" loading="lazy" width="15px" height="15px" alt="close">
       </button>
 
      {# current image being viewed #}
@@ -183,12 +191,12 @@ eleventyNavigation:
       
       {# left arrow #}
       <button class="arrow-left">
-         <img src="./assets/svgs/expand.svg">
+         <img src="./assets/svgs/expand.svg" aria-hidden="true" decoding="async" loading="lazy" width="15px" height="15px" alt="left-arrow">
       </button>
 
     {# right arrow #}
       <button class="arrow-right"> 
-         <img src="./assets/svgs/expand.svg">
+         <img src="./assets/svgs/expand.svg" aria-hidden="true" decoding="async" loading="lazy" width="15px" height="15px" alt="right-arrow">
       </button>
    </div>
 </section>
@@ -202,6 +210,49 @@ eleventyNavigation:
 
 
 {# testimonials section #}
+<section id="testimonials">
+   <h2>Testimonials</h2>
+   <p>Tempus imperdiet nulla malesuada pellentesque elit. Commodo odio aenean sed adipiscing diam donec.</p>
+
+   <div class="testimonials-container">
+   
+     <div class="testimonial">
+        <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
+         Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
+
+         <div class="client">
+            <span>Client name</span>
+            <span>Location</span>
+         </div>
+     </div>
+
+    
+     <div class="testimonial">
+        <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
+         Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
+
+         <div class="client">
+            <span>Client name</span>
+            <span>Location</span>
+         </div>
+      </div>
+   
+
+     
+     <div class="testimonial">
+        <p>Augue ut lectus arcu bibendum at varius. Suscipit tellus mauris a diam maecenas sed enim ut.
+         Quam nulla porttitor massa id neque. Ullamcorper malesuada proin libero nunc.</p>
+
+         <div class="client">
+            <span>Client name</span>
+            <span>Location</span>
+         </div>
+      </div>
+     
+
+   </div>
+
+</section>
 
 
 
