@@ -2,14 +2,28 @@
 
 /* GENERAL STYLES AND FONTS */
 :root {
-    --primary: #4A8EB5;
-    --primaryLight: #6EA4C4;
+    /* colors */
+    --primary: #1e76b1;
+    --primary-100: rgb(211, 235, 245);
+    --primary-300: #87b1ce;
+    --primary-700: #2f5b79;
+    --primary-900: #2c3c42;
+    --accentBlue: #3890c7;
     --secondary: #B5714A;
     --secondaryLight: #001f3f;
+    --grey-50: rgb(253, 253, 253);
+    --grey-100: rgb(242, 246, 247);
+    --grey-300: rgb(187, 199, 204);
+    --grey-200: rgb(221, 230, 238);
+    --grey-500: rgb(163, 163, 163);
+    --grey-700: #404040;
+    --grey-900: rgb(33, 34, 35);
     --headerColor: #1a1a1a;
     --bodyTextColor: #404040;
     --bodyTextColorWhite: #fafbfc;
-    --backgroundColorDark: #2b444f;
+    --backgroundColorDark: #191b1c;
+
+    /* primary, accent, grays */
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -55,11 +69,12 @@
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 100%;
-    color: var(--bodyTextColor);
+    color: var(--grey-700);
 }
 
 body {
     margin: 0;
+    background-color: var(--grey-50);
 }
 
 header,
@@ -92,7 +107,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: var(--bodyTextColor);
+    color: var(--grey-900);
     padding-bottom: .2em;
 
 
@@ -128,10 +143,11 @@ button {
     /* border: 1px solid var(--primary); */
     border-radius: 10px;
     font: inherit;
-    color: var(--bodyTextColorWhite);
+    color: var(--grey-100);
 
     &:hover {
-        background-color: var(--primaryLight);
+        background-color: var(--primary-700);
+        
     }
 }
 
@@ -172,7 +188,7 @@ button {
             top: 0;
             right: -999px;
             z-index: -100;
-            background-color: var(--backgroundColorDark);
+            background-color: var(--primary-900);
             height: 100vh;
             width: 55vw;
             transition: .5s all;
@@ -193,12 +209,12 @@ button {
                 padding: 0;
                 display: flex;
                 flex-direction: column;
-                gap: 1em;
+                gap: 1.2em;
 
                 li {
                     a {
                         text-decoration: none;
-                        color: var(--bodyTextColorWhite);
+                        color: var(--grey-100);
                         font-weight: 500;
                         font-size: 1.1rem;
                     }
@@ -206,7 +222,7 @@ button {
             }
 
             .cs-button {
-                color: var(--bodyTextColorWhite);
+                color: var(--grey-100);
             }
         }
 
@@ -233,7 +249,7 @@ button {
                 height: auto;
                 width: auto;
                 background-color: inherit;
-                color: var(--bodyTextColor);
+                color: var(--grey-900);
                 flex-direction: row;
                 gap: 6em;
                 padding: 0;
@@ -262,17 +278,22 @@ button {
 #cta {
     padding: 4em 0;
     text-align: center;
-    margin: 0;
+    margin: auto;
     margin-top: 5em;
-    width: 100%;
-    max-width: 100%;
-    background-image: url(../images/snow.jpg);
+    margin-bottom: 5em;
+    /* box-shadow: 0px 0px 10px 0px var(--grey-100); */
+    border-radius: 10px;
+    background-color: var(--primary-900);
+    /* width: 100%; */
+    max-width: 800px; 
+    /* background-image: url(../images/snow.jpg);
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;  */
 
     h2 {
         margin-top: 0;
         margin-bottom: 1em;
+        color: var(--grey-100);
 
     }
 
@@ -283,16 +304,18 @@ button {
 /* desktop */
 @media only screen and (min-width: 1023px) {
     #cta {
-        padding: 6em 0;
-        height: 320px;
+         padding: 6em 0;
+         margin-top: 10em;
+         margin-bottom: 10em;
+       
     }
 }
 
 /* FOOTER STYLES */
 footer {
     padding: 2em 0;
-    background-color: var(--backgroundColorDark);
-    color: var(--bodyTextColorWhite);
+    background-color: var(--grey-900);
+    color: var(--grey-100);
 
     .footer-content {
 
