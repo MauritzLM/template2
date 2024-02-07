@@ -7,7 +7,7 @@
 #contact-info {
     padding-top: 0;
     padding-bottom: 2em;
-    
+
 
     .form-and-info-container {
         display: flex;
@@ -21,7 +21,8 @@
             border-radius: 10px;
             width: 100%;
             align-self: center;
-            background-color: var(--grey-100);
+            background-color: var(--primary);
+            color: var(--grey-100);
 
             .contact-item {
                 max-width: 320px;
@@ -31,8 +32,11 @@
                 display: flex;
                 gap: 1em;
 
+
                 .type {
                     font-weight: 500;
+                    text-decoration: underline;
+                    text-decoration-thickness: 2px;
                 }
             }
 
