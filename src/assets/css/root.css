@@ -6,6 +6,7 @@
     --primary: #1e76b1;
     --primary-100: rgb(211, 235, 245);
     --primary-300: #87b1ce;
+    --primary-600: #375e79;
     --primary-700: #2f5b79;
     --primary-900: #2c3c42;
     --accentBlue: #3890c7;
@@ -16,7 +17,7 @@
     --grey-300: rgb(187, 199, 204);
     --grey-200: rgb(221, 230, 238);
     --grey-500: rgb(163, 163, 163);
-    --grey-700: #404040;
+    --grey-700: #373c3f;
     --grey-900: rgb(33, 34, 35);
     --headerColor: #1a1a1a;
     --bodyTextColor: #404040;
@@ -147,7 +148,7 @@ button {
 
     &:hover {
         background-color: var(--primary-700);
-        
+
     }
 }
 
@@ -285,7 +286,7 @@ button {
     border-radius: 10px;
     background-color: var(--primary-900);
     /* width: 100%; */
-    max-width: 800px; 
+    max-width: 800px;
     /* background-image: url(../images/snow.jpg);
     background-size: cover;
     background-repeat: no-repeat;  */
@@ -301,13 +302,14 @@ button {
         padding: .7em .9em .8em .9em;
     }
 }
+
 /* desktop */
 @media only screen and (min-width: 1023px) {
     #cta {
-         padding: 6em 0;
-         margin-top: 10em;
-         margin-bottom: 10em;
-       
+        padding: 6em 0;
+        margin-top: 10em;
+        margin-bottom: 10em;
+
     }
 }
 
