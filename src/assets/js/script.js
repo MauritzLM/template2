@@ -32,7 +32,8 @@ for (let i = 0; i < faqItems.length; i++) {
 };
 
 
-// image viewer modal (not in use atm)
+// image viewer modal (not in use atm)*
+
 // click on image, change src of modal image, change styles of modal,
 // const galleryImages = document.querySelectorAll("#gallery .image-container img");
 // const modalImage = document.querySelector(".image-viewer .current-image img");
