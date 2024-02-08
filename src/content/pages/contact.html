@@ -8,56 +8,55 @@ stylesheet: ../assets/css/contact.css
 stylesheet_root: ../assets/css/root.css
 script: ../assets/js/script.js
 ---
-
+<!-- HERO SECTION -->
 <section id="hero">
    <h1>Contact page</h1>
    
 </section>
 
+<!-- CONTACT INFO AND FORM -->
 <section id="contact-info">
        <h2>Contact me</h2>
 
      <div class="form-and-info-container">
 
-        <form>
+       <!-- contact form -->
+      <form>
+           <div>
+             <label for="name">Name</label>
+              <input type="text" name="name" id="name"> 
+           </div>
 
-    <div>
-       <label for="name">Name</label>
-        <input type="text" name="name" id="name"> 
-     </div>
+            <div>
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email"> 
+           </div>
 
-     <div>
-       <label for="email">Email</label>
-        <input type="email" name="email" id="email"> 
-     </div>
+           <div>
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" rows="10" cols="20">
+                </textarea>
+           </div>
 
-     <div>
-       <label for="message">Your message</label>
-       <textarea id="message" name="message" rows="10" cols="20">
-       </textarea>
-     </div>
+            <button type="submit" class="cs-button">Submit</button>
+      </form>
 
-     <button type="submit" class="cs-button">Submit</button>
-
-    </form>
-
-       <div class="contact-info-container">
+     <!-- contact info box -->
+      <div class="contact-info-container">
      
-        <div class="contact-item">
-          <span class="type">Whatsapp:</span> <span>123456789</span>
-        </div>
+           <div class="contact-item">
+              <span class="type">Whatsapp:</span> <span>123456789</span>
+           </div>
 
-        <div class="contact-item">
-           <span class="type">email:</span> <span>person@email</span>
-        </div>
+           <div class="contact-item">
+              <span class="type">email:</span> <span>person@email</span>
+           </div>
 
-        <div class="contact-item">
-          <span class="type">Business hours:</span> <span>Monday - Friday 9am - 5pm</span>
-        </div>
+           <div class="contact-item">
+             <span class="type">Business hours:</span> <span>Monday - Friday 9am - 5pm</span>
+           </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
    </div>
-    
-</div>
 </section>

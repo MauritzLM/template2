@@ -13,19 +13,19 @@ eleventyNavigation:
 ---
 
 
-{# HERO SECTION #}
+<!-- HERO SECTION -->
 <section id="hero">
    <h1>Services Page</h1>
    <p>This is the hero section</p>
 </section>
 
 
-
-{# SERVICE SECTION #}
+<!-- SERVICES SECTION -->
 <section id="services">
 
    <h2>Services I provide</h2>
 
+   <!-- service card --> 
    <div class="service-card">
    <h3>Service name</h3>
 
@@ -44,51 +44,63 @@ eleventyNavigation:
 </section>
 
 
-
-{# ADDITIONAL INFO SECTION #}
+<!-- ADDITIONAL INFO SECTION -->
 <section id="what-to-expect">
+
    <h2>What to expect</h2>
+
    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
     Blandit volutpat maecenas volutpat blandit aliquam. Arcu non odio euismod lacinia at quis risus sed. </p>
+
 </section>
 
 
-
-{# FAQ #}
+<!-- FAQ SECTION -->
 <section id="faq">
    <h2>Frequently asked questions</h2>
 
+  <!-- questions container -->
    <div class="faq-container">
 
       <div class="faq-item">
+
         <img src="../../assets/svgs/expand.svg" alt="expand" aria-hidden="true" decoding="async" width="40" height="40"> 
+        <!-- question and hidden answer -->
         <button>question</button>
         <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
       </div>
 
       <div class="faq-item">
+
         <img src="../../assets/svgs/expand.svg" alt="expand" aria-hidden="true" decoding="async" width="40" height="40"> 
+
         <button>question</button>
         <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
       </div>
 
       <div class="faq-item">
+
         <img src="../../assets/svgs/expand.svg" alt="expand" aria-hidden="true" decoding="async" width="40" height="40"> 
+
         <button>question</button>
         <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
       </div>
 
       <div class="faq-item">
+
         <img src="../../assets/svgs/expand.svg" alt="expand" aria-hidden="true" decoding="async" width="40" height="40"> 
+
         <button>question</button>
         <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua.</p>
+
       </div>
    </div>
 </section>
 
 
-
-
-{# CALL TO ACTION #}
+<!-- CALL TO ACTION -->
 {% include 'components/cta.html' %}

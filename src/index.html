@@ -13,10 +13,10 @@ eleventyNavigation:
 ---
 
 
-{# HERO SECTION #}
+<!-- HERO SECTION -->
 <section id="hero">
 
-   {# hero image, different files for mobile/larger screens #}
+   <!-- hero image -->
      <picture>
        <source media="(max-width: 600px)" srcset="./assets/images/snow-m.jpg">
        <source media="(min-width: 601px)" srcset="./assets/images/snow.jpg">
@@ -24,7 +24,7 @@ eleventyNavigation:
        <img aria-hidden="true" decoding="async" src="./assets/images/snow.jpg" alt="snow mountain with hikers" width="1920" height="1280" loading="eager">
     </picture>
 
-  {# hero text #}
+  <!-- hero text -->
    <div class="hero-text">
       <h1>Home page title</h1>
       <h2>Sub-heading</h2>
@@ -40,11 +40,11 @@ eleventyNavigation:
 
 
 
-{# SERVICES SECTION #}
+<!-- SERVICES SECTION -->
 <section id="services">
   <h2>Services</h2>
 
- {# service card container #}
+  <!-- service card container -->
   <div class="services-container">
 
      <div class="service-card">
@@ -52,6 +52,7 @@ eleventyNavigation:
         <img src="./assets/svgs/communication.svg" alt="communication" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20"/>
          <h3>service name</h3>
         <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
+
      </div>
 
       <div class="service-card">
@@ -75,10 +76,10 @@ eleventyNavigation:
 
 
 
-{# ABOUT ME SECTION #}
+<!-- ABOUT SECTION -->
 <section id="about">
 
-   {# about image #}
+   <!-- about image -->
    <picture>
        <source media="(max-width: 600px)" srcset="./assets/images/about-image.jpg">
        <source media="(min-width: 601px)" srcset="./assets/images/about-image.jpg">
@@ -86,7 +87,7 @@ eleventyNavigation:
        <img src="./assets/images/about-image.jpg" alt="profile picture" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
     </picture>
     
-    {# about text #}
+   <!-- about text -->
   <div class="about-text">
     <h2>About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -96,8 +97,7 @@ eleventyNavigation:
 
       <p class="cs-text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua.</p>
 
-      
-        {# learn more link #}
+        <!-- learn more link -->
          <a href="/about" class="cs-arrowlink">
              <span>Learn more</span>
               <img src="./assets/svgs/arrow_forward.svg" alt="arrow" aria-hidden="true" decoding="async" loading="lazy" width="20" height="20">
@@ -108,30 +108,31 @@ eleventyNavigation:
 
 
 
-{# INFO ABOUT SERVICE SECTION #}
+<!-- ADDITIONAL INFO SECTION -->
 <section id="service-info">
   <h2>Additional info</h2>
 
-<div class="container"> 
-  <div class="info-block">
+<!-- info block container -->
+ <div class="container"> 
+   <div class="info-block">
    
-     <img src="./assets/images/mountain.jpg" alt="person on mountain" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
+      <img src="./assets/images/mountain.jpg" alt="person on mountain" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
-     <div>
-        <h3>Sub-heading</h3>
+      <div>
+         <h3>Sub-heading</h3>
 
-        <ul>
-          <li>Vitae aliquet nec ullamcorper sit amet risus nullam eget. At tempor commodo ullamcorper a lacus.
-           Euismod in pellentesque massa placerat.
-           Vel facilisis volutpat est velit egestas</li>
+         <ul>
+           <li>Vitae aliquet nec ullamcorper sit amet risus nullam eget. At tempor commodo ullamcorper a lacus.
+            Euismod in pellentesque massa placerat.
+            Vel facilisis volutpat est velit egestas</li>
 
-          <li> Sed viverra tellus in hac habitasse. Elit at imperdiet dui accumsan sit amet nulla facilisi</li>
-        </ul>
-     </div>
-  </div>
+           <li> Sed viverra tellus in hac habitasse. Elit at imperdiet dui accumsan sit amet nulla facilisi</li>
+         </ul>
+      </div>
+   </div>
 
-  <div class="info-block">
-     {# add img #}
+   <div class="info-block">
+     
      <img src="./assets/images/road.jpg" alt="open road" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
      <div>
@@ -146,10 +147,10 @@ eleventyNavigation:
           Rhoncus mattis rhoncus urna neque viverra justo</li>
         </ul>
      </div>
-  </div>
+   </div>
 
-  <div class="info-block">
-     {# add img #}
+   <div class="info-block">
+     
      <img src="./assets/images/rocks.jpg" alt="stacked rocks" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
 
      <div>
@@ -162,15 +163,16 @@ eleventyNavigation:
            Convallis a cras semper auctor neque vitae tempus quam pellentesque.</li>
         </ul>
      </div>
-  </div>
+   </div>
  </div>
 </section>
 
 
-{# gallery section with image viewer modal #}
+<!-- GALLERY SECTION -->
 <section id="gallery">
    <h2>Gallery</h2>
 
+   <!-- gallery images -->
    <div class="image-container">
       <img src="./assets/images/travel-1.jpg" alt="map" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
       <img src="./assets/images/travel-3.jpg" alt="minibus on road" aria-hidden="true" decoding="async" loading="lazy" width="400" height="560">
@@ -205,18 +207,12 @@ eleventyNavigation:
 </section>
 
 
-
-
-
-
-
-
-
-{# testimonials section #}
+<!-- TESTIMONIALS SECTION -->
 <section id="testimonials">
    <h2>Testimonials</h2>
    <p>Tempus imperdiet nulla malesuada pellentesque elit. Commodo odio aenean sed adipiscing diam donec.</p>
 
+   <!-- testimonial card container -->
    <div class="testimonials-container">
    
      <div class="testimonial">
@@ -257,7 +253,5 @@ eleventyNavigation:
 
 </section>
 
-
-
-{# CALL TO ACTION #}
+<!-- CALL TO ACTION -->
 {% include 'components/cta.html' %}
