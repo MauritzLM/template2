@@ -22,7 +22,6 @@
         background-color: var(--grey-100);
 
         img {
-            /* max-width: 400px; */
             border-radius: 10px;
         }
 
@@ -136,14 +135,12 @@
                 background-color: inherit;
                 font: inherit;
                 font-weight: 500;
-
             }
 
             p {
                 width: 92%;
                 margin-left: 1em;
             }
-
         }
     }
 }
@@ -151,14 +148,9 @@
 /* desktop */
 @media only screen and (min-width: 1023px) {
     #faq {
-
         h2 {
             margin-bottom: 2em;
         }
-
-        /* .faq-container {
-            gap: 2.5em;
-        } */
     }
 }
 

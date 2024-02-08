@@ -1,9 +1,11 @@
 /* STYLES FOR THE CONTACT PAGE */
 
+/* HERO SECTION */
 #hero {
     padding: 0;
 }
 
+/* CONTACT INFO and FORM*/
 #contact-info {
     padding-top: 0;
     padding-bottom: 2em;
@@ -21,8 +23,8 @@
             border-radius: 10px;
             width: 100%;
             align-self: center;
-            background-color: var(--primary);
-            color: var(--grey-100);
+            background-color: var(--grey-50);
+            color: var(--primary-700);
 
             .contact-item {
                 max-width: 320px;
@@ -69,8 +71,6 @@
                     border: 1px solid var(--grey-200);
                     width: 100%;
                 }
-
-
             }
 
             .cs-button {
@@ -79,15 +79,13 @@
             }
         }
     }
-
-
 }
 
 /* tablet */
 @media screen and (min-width: 600px) {
     #contact-info {
-
         .form-and-info-container {
+            margin-top: 4em;
             .contact-info-container {
                 width: 500px;
             }
@@ -114,7 +112,6 @@
                 }
             }
         }
-
     }
 }
 

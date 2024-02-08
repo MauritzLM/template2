@@ -3,28 +3,28 @@
 /* GENERAL STYLES AND FONTS */
 :root {
     /* colors */
-    --primary: #1e76b1;
+    /* primary, accent, grays */
+    --primary: #2583c3;
     --primary-100: rgb(211, 235, 245);
+    --primary-200: rgb(120, 195, 230);
     --primary-300: #87b1ce;
+    --primary-400: #5894bd;
     --primary-600: #375e79;
     --primary-700: #2f5b79;
+    --primary-800: #0e2c41; 
     --primary-900: #2c3c42;
-    --accentBlue: #3890c7;
+    
     --secondary: #B5714A;
     --secondaryLight: #001f3f;
+
     --grey-50: rgb(253, 253, 253);
     --grey-100: rgb(242, 246, 247);
     --grey-300: rgb(187, 199, 204);
     --grey-200: rgb(221, 230, 238);
     --grey-500: rgb(163, 163, 163);
     --grey-700: #373c3f;
-    --grey-900: rgb(33, 34, 35);
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #404040;
-    --bodyTextColorWhite: #fafbfc;
-    --backgroundColorDark: #191b1c;
-
-    /* primary, accent, grays */
+    --grey-900: rgb(43, 44, 46);
+    --grey-950: rgb(26, 28, 29);
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -36,7 +36,7 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
-/* roboto-500 - latin */
+/* roboto-500  */
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -45,7 +45,7 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* roboto-700 - latin */
+/* roboto-700 */
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -54,7 +54,7 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* roboto-900 - latin */
+/* roboto-900 */
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -70,7 +70,7 @@
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 100%;
-    color: var(--grey-700);
+    color: var(--grey-900);
 }
 
 body {
@@ -141,13 +141,12 @@ button {
 .cs-button {
     padding: .2em 1em .3em 1em;
     background-color: var(--primary);
-    /* border: 1px solid var(--primary); */
     border-radius: 10px;
     font: inherit;
     color: var(--grey-100);
 
     &:hover {
-        background-color: var(--primary-700);
+        background-color: var(--primary-400);
 
     }
 }
@@ -189,7 +188,7 @@ button {
             top: 0;
             right: -999px;
             z-index: -100;
-            background-color: var(--primary-900);
+            background-color: var(--primary-800);
             height: 100vh;
             width: 55vw;
             transition: .5s all;
@@ -277,29 +276,28 @@ button {
 
 /* CTA */
 #cta {
-    padding: 4em 0;
+    height: 250px;
     text-align: center;
     margin: auto;
     margin-top: 5em;
     margin-bottom: 5em;
-    /* box-shadow: 0px 0px 10px 0px var(--grey-100); */
     border-radius: 10px;
     background-color: var(--primary-900);
-    /* width: 100%; */
-    max-width: 800px;
-    /* background-image: url(../images/snow.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;  */
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 
     h2 {
         margin-top: 0;
-        margin-bottom: 1em;
         color: var(--grey-100);
-
     }
 
     .cs-button {
         padding: .7em .9em .8em .9em;
+        width: 120px;
     }
 }
 
@@ -309,6 +307,7 @@ button {
         padding: 6em 0;
         margin-top: 10em;
         margin-bottom: 10em;
+        height: 350px;
 
     }
 }
@@ -316,7 +315,7 @@ button {
 /* FOOTER STYLES */
 footer {
     padding: 2em 0;
-    background-color: var(--grey-900);
+    background-color: var(--grey-950);
     color: var(--grey-100);
 
     .footer-content {
@@ -387,10 +386,6 @@ footer {
 
             .sitemap {
                 align-self: center;
-
-                /* h3 {
-                    margin: 0;
-                } */
 
                 div {
                     display: flex;

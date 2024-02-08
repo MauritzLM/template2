@@ -1,10 +1,9 @@
 /* STYLES FOR THE HOME PAGE */
 
-/* get in touch link */
+/* arrow-link */
 .cs-arrowlink {
     display: flex;
     align-items: center;
-    /* border-bottom: 1px solid black; */
     width: max-content;
     gap: .3em;
     font-weight: 500;
@@ -137,7 +136,7 @@
 
     .about-text {
         .cs-text {
-            border-left: 2px solid black;
+            border-left: 2px solid var(--grey-900);
             font-size: 1.2rem;
             font-weight: 600;
             padding-left: .5em;
@@ -211,7 +210,7 @@
                 h3 {
                     padding-bottom: .5em;
                     width: max-content;
-                    border-bottom: 1px solid var(--grey-100);
+                    border-bottom: 2px solid var(--primary-200);
                 }
 
                 ul {
@@ -220,8 +219,6 @@
                     gap: 2em;
                     padding-left: 1em;
                     margin-top: 2em;
-
-
                 }
             }
         }
@@ -249,7 +246,6 @@
                 justify-content: center;
                 width: 100%;
 
-
                 img {
                     display: initial;
                     max-width: 400px;
@@ -259,17 +255,18 @@
 
                 div {
                     border-radius: 10px;
-                    /* box-shadow: 0px 4px 10px 0px var(--grey-200); */
+                    box-shadow: 0px 0px 19px rgba(0,0,0,.1);;
                     width: 60%;
                     padding: 2em 4em;
-                    background-color: var(--primary-900);
+                    background-color: var(--grey-50);
                     position: relative;
                     right: 20px;
-                    color: var(--grey-100);
+                    color: var(--grey-900);
 
                     h3 {
                         margin-top: 0;
                         width: 100%;
+                        font-size: 1.6rem;
                     }
 
                     ul {
@@ -329,8 +326,7 @@
         }
     }
 
-    /* figure out current image size* */
-
+    /* not in use atm */
     .image-viewer {
         display: none;
         position: absolute;
@@ -338,10 +334,8 @@
         top: 0;
         height: 1000px;
         width: 110%;
-        /* padding: 5em; */
 
         .current-image {
-
             width: 90%;
             height: 90%;
             margin: auto;
@@ -359,8 +353,6 @@
             height: 30px;
             width: 30px;
             border: none;
-            /* background-color: none; */
-
         }
 
         .arrow-left {
@@ -442,7 +434,6 @@
             border-radius: 10px;
 
             p {
-                /* background-color: #eeebeb; */
                 margin: 0;
                 padding: 1.4em;
                 border-radius: 10px 10px 0 0;
@@ -450,12 +441,10 @@
 
             .client {
                 background-color: var(--grey-100);
-                /* border-top: 1px solid var(--primary); */
                 display: flex;
                 flex-direction: column;
                 gap: .7em;
                 padding: 1.2em 1.7em;
-                /* color: var(--bodyTextColorWhite); */
                 border-radius: 0 0 10px 10px;
                 font-weight: 500;
             }

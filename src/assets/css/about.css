@@ -51,6 +51,7 @@
         }
     }
 }
+/* desktop */
 @media only screen and (min-width: 1023px) {
     #my-mission {
         display: grid;
@@ -63,7 +64,6 @@
         h2 {
             grid-area: heading;
             margin-bottom: 0;
-        
         }
         
         img {
@@ -73,8 +73,5 @@
         .cs-text {
             grid-area: text;
         }
-    }
-    
+    }   
 }
-
-
