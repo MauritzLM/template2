@@ -4,16 +4,16 @@
 :root {
     /* colors */
     /* primary, accent, grays */
-    --primary: #2583c3;
+    --primary: #237CB8;
     --primary-100: rgb(211, 235, 245);
     --primary-200: rgb(120, 195, 230);
     --primary-300: #87b1ce;
     --primary-400: #5894bd;
     --primary-600: #375e79;
     --primary-700: #2f5b79;
-    --primary-800: #0e2c41; 
+    --primary-800: #0e2c41;
     --primary-900: #2c3c42;
-    
+
     --secondary: #B5714A;
     --secondaryLight: #001f3f;
 
@@ -350,25 +350,33 @@ footer {
 
             h3 {
                 font-size: 1rem;
+                letter-spacing: .5px;
             }
 
-            ul {
-                list-style: none;
-                padding: 0;
-                margin-bottom: 2em;
+            div {
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin-bottom: 2em;
 
-                display: flex;
-                flex-direction: column;
-                gap: .7em;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.2em;
 
-
-
-                li {
-                    a {
-                        color: inherit;
+                    li {
+                        a {
+                            color: inherit;
+                            font-size: 1.1rem;
+                        }
                     }
                 }
+
+                .cs-button {
+                    padding: .4em .9em .5em .9em;
+                }
             }
+
+
         }
     }
 }
